@@ -14,7 +14,7 @@ from sklearn.metrics import confusion_matrix
 
 with open('spam.pkl', 'rb') as file:
     # Load the data from the file
-    model, species_encoder, island_encoder ,sex_encoder = pickle.load(file)
+    label, text = pickle.load(file)
 
 model = LogisticRegression()
 
