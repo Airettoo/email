@@ -1,5 +1,17 @@
-%%writefile requirements.txt
+import pandas as pd
+import sys
+import sklearn
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+import nltk
+nltk.download("popular")
+import numpy
 import streamlit as st
+from sklearn.metrics import confusion_matrix
+
+
 st.title ("Email Spam Prediction")
 st.write("""
 This app uses a Naive Bayes classifier to predict whether an email is spam or ham.
@@ -9,7 +21,7 @@ email_text = st.text_area("Enter the email text here:")
 if st.button('Predict'):
     prediction = model.predict([email_text])
     prediction_proba = model.predict_proba([email_text])
-    
+
     st.write(f"Predicted Class: {'Spam' if prediction[0] == 1 else 'Ham'}")
     st.write("Prediction Probability:")
     st.write(f"Spam: {prediction_proba[0][1]:.2f}")
