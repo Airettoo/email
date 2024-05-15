@@ -1,3 +1,4 @@
+%%writefile requirements.txt
 import streamlit as st
 st.title ("Email Spam Prediction")
 st.write("""
