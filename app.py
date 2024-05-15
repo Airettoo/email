@@ -12,6 +12,10 @@ import numpy
 import streamlit as st
 from sklearn.metrics import confusion_matrix
 
+with open('spam.pkl', 'rb') as file:
+    # Load the data from the file
+    model, species_encoder, island_encoder ,sex_encoder = pickle.load(file)
+
 model = LogisticRegression()
 
 st.title ("Email Spam Prediction")
