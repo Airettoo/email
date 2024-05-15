@@ -12,10 +12,11 @@ import numpy
 import streamlit as st
 from sklearn.metrics import confusion_matrix
 
+model = LogisticRegression()
 
 st.title ("Email Spam Prediction")
 st.write("""
-This app uses a Naive Bayes classifier to predict whether an email is spam or ham.
+This app uses a Logistic Regression classifier to predict whether an email is spam or ham.
 """)
 email_text = st.text_area("Enter the email text here:")
 
