@@ -12,7 +12,7 @@ import numpy
 import streamlit as st
 from sklearn.metrics import confusion_matrix
 
-with open('spam.pkl', 'rb') as file:
+with open('prediction_on_training_data.pkl', 'rb') as file:
     # Load the data from the file
     label, text = pickle.load(file)
 
