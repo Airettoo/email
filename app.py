@@ -35,4 +35,4 @@ if st.button('Predict'):
     st.write("Classification Report:")
     st.text(report)
     st.write("Confusion Matrix:")
-    st.write(conf_matrix)
+    st.write(confusion_matrix)
